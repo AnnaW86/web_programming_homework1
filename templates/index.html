@@ -30,9 +30,22 @@
             <input type="radio" name="recurring" id="recurring" value="recurring">
         </div>
         <div id="submit_reset_group">
-        <input type="submit" value="Add Event" id="submit">
-        <input type="reset" id="reset">
+            <input type="submit" value="Add Event" id="submit">
+            <input type="reset" id="reset">
         </div>
+    </form>
+
+    <form action="/events/delete" method="post" id="form2">
+        <div>
+            <label for="delete">What would you like to delete?</label>
+            <select name="delete" id="delete">
+                <option value="">--Please choose an option--</option>
+                {% for event in all_events %}                
+                    <option value="{{ event.title }}">{{event.title}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <input type="submit" value="Delete Event" id="submit-delete">
     </form>
 
     <table id="table">

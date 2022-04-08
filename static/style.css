@@ -27,7 +27,7 @@ body > main > form * {
     vertical-align: middle;
 }
 
-body > main > form > div > input, textarea {
+body > main > form > div > input, textarea, select {
     margin: 8px;
     border-radius: 3px;
     border: none;
@@ -41,6 +41,14 @@ body > main > form > div > input, textarea {
     padding: 4px 6px;
     font-family: 'Barlow', sans-serif;
 }
+
+body > main > form > input {
+    margin-left: 160px;
+    margin-bottom: 50px;
+    border-style: none;
+    border-radius: 3px;
+}
+
 
 body > main > table {
     border: 1x solid black;
