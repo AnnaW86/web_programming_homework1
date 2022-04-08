@@ -1,0 +1,75 @@
+body {
+    font-family: 'Barlow', sans-serif;
+    background-color: #DFDCE3;
+}
+
+body > main {
+    width: 70%;
+    margin: auto;
+}
+
+h1 {
+    margin-left: 48px;
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+#form label {
+    display: inline-block;
+    width: 150px;
+    margin-left: 40px;
+    text-align: end;
+}
+
+#form * {
+    vertical-align: middle;
+}
+
+#date {
+    font-family: 'Barlow', sans-serif;
+}
+
+input, textarea {
+    margin: 8px;
+    border-radius: 3px;
+    border: none;
+    background-color: whitesmoke;
+    font-family: 'Barlow', sans-serif;
+}
+
+#submit_reset_group {
+    margin-left: 186px;
+    margin-bottom: 32px;
+    padding: 4px 6px;
+    font-family: 'Barlow', sans-serif;
+}
+
+#table {
+    margin-left: 40px;
+    border: 1x solid black;
+    border-collapse: collapse;
+}
+
+table th {
+    background-color: #4ABDAC;
+    color: whitesmoke;
+}
+
+table td {
+    padding: 5px 15px;
+    width: auto;
+}
+
+td:nth-child(1) {width: 120px}
+
+td:nth-child(6) {
+    width: 120px;
+    text-align: center;
+}
+
+tr:nth-child(even) {background-color: whitesmoke}
