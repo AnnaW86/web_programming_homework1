@@ -4,37 +4,30 @@ body {
 }
 
 body > main {
-    width: 70%;
+    width: 80%;
     margin: auto;
 }
 
-h1 {
-    margin-left: 48px;
-}
-
-ul {
+body > nav > ul {
     list-style: none;
 }
-a {
+
+body > nav > ul > li > a {
     text-decoration: none;
 }
 
-#form label {
+body > main > form > div > label {
     display: inline-block;
     width: 150px;
-    margin-left: 40px;
+    /* margin-left: 40px; */
     text-align: end;
 }
 
-#form * {
+body > main > form * {
     vertical-align: middle;
 }
 
-#date {
-    font-family: 'Barlow', sans-serif;
-}
-
-input, textarea {
+body > main > form > div > input, textarea {
     margin: 8px;
     border-radius: 3px;
     border: none;
@@ -43,33 +36,32 @@ input, textarea {
 }
 
 #submit_reset_group {
-    margin-left: 186px;
+    margin-left: 150px;
     margin-bottom: 32px;
     padding: 4px 6px;
     font-family: 'Barlow', sans-serif;
 }
 
-#table {
-    margin-left: 40px;
+body > main > table {
     border: 1x solid black;
     border-collapse: collapse;
 }
 
-table th {
+body > main > table th {
     background-color: #4ABDAC;
     color: whitesmoke;
 }
 
-table td {
+body > main > table td {
     padding: 5px 15px;
     width: auto;
 }
 
-td:nth-child(1) {width: 120px}
+body > main > table tr td:nth-child(1) {width: 140px}
 
-td:nth-child(6) {
-    width: 120px;
+body > main > table tr td:last-child {
+    width: 150px;
     text-align: center;
 }
 
-tr:nth-child(even) {background-color: whitesmoke}
+body > main > table tr:nth-child(even) {background-color: whitesmoke}
