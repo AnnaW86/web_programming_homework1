@@ -4,50 +4,58 @@
 
     <h1>Our Events</h1>
 
-    <form action="/events" method="post" id="form">
-        <div>
-            <label for="date" class="label">Date:</label>
-            <input type="date" name="date" id="date">
-        </div>
-        <div>
-            <label for="title" class="label">Title:</label>
-            <input type="text" name="title" id="title">
-        </div>
-        <div>
-            <label for="description"  class="label" >Description:</label>
-            <textarea name="description" rows="1" cols="30" id="description"></textarea>
-        </div>
-        <div>
-            <label for="guests"  class="label">Number of guests:</label>
-            <input type="number" name="number_of_guests" id="guests">
-        </div>
-        <div>
-            <label for="location"  class="label">Location:</label>
-            <input type="text" name="location" id="location">
-        </div>
-        <div>
-            <label for="recurring" class="label">Select for a recurring event:</label>
-            <input type="radio" name="recurring" id="recurring" value="recurring">
-        </div>
-        <div id="submit_reset_group">
-            <input type="submit" value="Add Event" id="submit">
-            <input type="reset" id="reset">
-        </div>
-    </form>
+    <section>
+        <fieldset>
+            <legend>Add Event</legend>
+            <form action="/events" method="post" id="form">
+                <div>
+                    <label for="date" class="label">Date:</label>
+                    <input type="date" name="date" id="date">
+                </div>
+                <div>
+                    <label for="title" class="label">Title:</label>
+                    <input type="text" name="title" id="title">
+                </div>
+                <div>
+                    <label for="description"  class="label" >Description:</label>
+                    <textarea name="description" rows="1" cols="30" id="description"></textarea>
+                </div>
+                <div>
+                    <label for="guests"  class="label">Number of guests:</label>
+                    <input type="number" name="number_of_guests" id="guests">
+                </div>
+                <div>
+                    <label for="location"  class="label">Location:</label>
+                    <input type="text" name="location" id="location">
+                </div>
+                <div>
+                    <label for="recurring" class="label">Select for a recurring event:</label>
+                    <input type="radio" name="recurring" id="recurring" value="recurring">
+                </div>
+                <div id="submit_reset_group">
+                    <input type="submit" value="Add Event" id="submit">
+                    <input type="reset" id="reset">
+                </div>
+            </form>
+        </fieldset>
 
-    <form action="/events/delete" method="post" id="form2">
-        <div>
-            <label for="delete">What would you like to delete?</label>
-            <select name="delete" id="delete">
-                <option value="">--Please choose an option--</option>
-                {% for event in all_events %}                
-                    <option value="{{ event.title }}">{{event.title}}</option>
-                {% endfor %}
-            </select>
-        </div>
-        <input type="submit" value="Delete Event" id="submit-delete">
-    </form>
-
+        <fieldset>
+            <legend>Delete Event</legend>
+            <form action="/events/delete" method="post" id="form2">
+                <div>
+                    <label for="delete">What would you like to delete?</label>
+                    <select name="delete" id="delete">
+                        <option value="">--Please choose an option--</option>
+                        {% for event in all_events %}                
+                            <option value="{{ event.title }}">{{event.title}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <input type="submit" value="Delete Event" id="submit-delete">
+            </form>
+        </fieldset>
+    </section>
+    
     <table id="table">
         <tr>
             <th>When?</th>
@@ -73,7 +81,6 @@
                 {% if not event.recurring%}
                     <span>&#10007</span>
                 {% endif %}
-
             </td>
         </tr>
   

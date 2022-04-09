@@ -16,18 +16,27 @@ body > nav > ul > li > a {
     text-decoration: none;
 }
 
-body > main > form > div > label {
+body > main > section {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+body > main > section > fieldset {
+    padding: 8px 32px;
+    margin-bottom: 32px;
+}
+
+body > main > section > fieldset > form > div > label {
     display: inline-block;
     width: 150px;
-    /* margin-left: 40px; */
     text-align: end;
 }
 
-body > main > form * {
+body > main > section > fieldset > form * {
     vertical-align: middle;
 }
 
-body > main > form > div > input, textarea, select {
+body > main > section > fieldset > form > div > input, textarea, select {
     margin: 8px;
     border-radius: 3px;
     border: none;
@@ -37,16 +46,16 @@ body > main > form > div > input, textarea, select {
 
 #submit_reset_group {
     margin-left: 150px;
-    margin-bottom: 32px;
     padding: 4px 6px;
     font-family: 'Barlow', sans-serif;
 }
 
-body > main > form > input {
+body > main > section > fieldset > form > input {
     margin-left: 160px;
     margin-bottom: 50px;
     border-style: none;
     border-radius: 3px;
+    display: inline-block
 }
 
 

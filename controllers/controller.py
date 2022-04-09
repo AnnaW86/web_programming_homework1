@@ -2,6 +2,7 @@ from re import A
 from secrets import token_bytes
 from flask import render_template, request
 
+
 from app import app
 from models.events_list import events
 from models.event import Event
